@@ -1,11 +1,12 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: page
+title: Contact
+permalink: /contact/
 ---
 
+
 [Contact us](mailto:care@mgeek.in)
+==========
 # Webmaster 
 Prateek Raj Gautam  
 Ph.D. Research Scholar ECED MNNIT Allahabad  
