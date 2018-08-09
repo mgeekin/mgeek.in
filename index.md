@@ -5,20 +5,14 @@
 layout: home
 ---
 
-Contact us 
+[Contact us](mailto:care@mgeek.in)
 ==========
-# webmaster 
-Prateek Raj Gautam
-------------------
+# Webmaster 
+Prateek Raj Gautam  
+Ph.D. Research Scholar ECED MNNIT Allahabad  
 
-Ph.D. Research Scholar ECED MNNIT Allahabad {#prateek-raj-gautam2}
--------------------------------------------
-
-### [Email: prateekrajgautam.dev@gmail.com](mailto:prateekrajgautam.dev@gmail.com)
-
-### [Connect at facebook.com/prateekrajgautam](https://fb.com/prateekrajgautam) 
-
-### [webpage mGeek.in](http://mgeek.in)
-
-### [Like our facebook page](https://fb.com/mgeek.in) 
+#### [Email: prateekrajgautam.dev@gmail.com](mailto:prateekrajgautam.dev@gmail.com)  
+#### [Connect at facebook.com/prateekrajgautam](https://fb.com/prateekrajgautam)   
+#### [webpage mGeek.in](http://mgeek.in)  
+#### [Like our facebook page](https://fb.com/mgeek.in) 
 
