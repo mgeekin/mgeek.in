@@ -5,9 +5,9 @@
 layout: home
 ---
 
-Contact us {#webmaster}
+Contact us 
 ==========
-
+# webmaster 
 Prateek Raj Gautam
 ------------------
 
