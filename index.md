@@ -5,7 +5,7 @@
 layout: home
 ---
 
-Search and Download Free Matlab code form our github page
+# Search and Download Free Matlab code form our github page
 [GITHUB/mgeekmatlab](https://github.com/mgeekmatlab)
 
 [Contact us](mailto:care@mgeek.in)
