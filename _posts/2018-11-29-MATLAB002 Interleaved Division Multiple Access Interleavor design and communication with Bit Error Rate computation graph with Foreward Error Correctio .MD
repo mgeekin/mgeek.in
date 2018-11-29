@@ -16,5 +16,10 @@ Paper can be downoaded form [here](https://ieeexplore.ieee.org/document/1618943/
 
 Matlab simulation code can be downoaded form [github.com/mgeekmatlab](https://github.com/mgeekmatlab/IDMA-interleavor-design-and-communication-BER-FEC)
 
+### result mpsk_with_M=2,no_of_users=16,datalength=512,spreadinglength=32
+
+![BER](https://raw.githubusercontent.com/mgeekmatlab/mpsk_with_M=2,no_of_users=16,datalength=512,spreadinglength=32,useenergyprofile=01.jpg)
+![flow1](https://raw.githubusercontent.com/mgeekmatlab/IDMA-interleavor-design-and-communication-BER-FEC/master/vivek%20flow%201.jpg)
+![flow2](https://raw.githubusercontent.com/mgeekmatlab/IDMA-interleavor-design-and-communication-BER-FEC/master/vivek%20flow%202.JPG)
 ![flow1](https://raw.githubusercontent.com/mgeekmatlab/IDMA-interleavor-design-and-communication-BER-FEC/master/vivek%20flow%201.jpg)
 ![flow2](https://raw.githubusercontent.com/mgeekmatlab/IDMA-interleavor-design-and-communication-BER-FEC/master/vivek%20flow%202.JPG)
