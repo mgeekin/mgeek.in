@@ -9,7 +9,7 @@ categories: MATLAB PROJECT CODE IEEE PAPER SIMULATION
 Paper can be downloaded form [here](http://ieeexplore.ieee.org/document/4052801/)
 [PDF download](https://www.ijser.org/researchpaper/ECG-Signal-Analysis-Using-Wavelet-Transform.pdf)
 
-simulation code can be downoaded form [github.com/mgeekmatlab](https://github.com/mgeekmatlab)
+simulation code can be downoaded form [github.com/mgeekmatlab](https://github.com/mgeekmatlab/ECG-wavelet-feature-extraction)
 
 ## results 
 
