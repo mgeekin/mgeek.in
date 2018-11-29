@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Sitemap
+permanent: /sitemap/
 ---
 
 ## Posts  
