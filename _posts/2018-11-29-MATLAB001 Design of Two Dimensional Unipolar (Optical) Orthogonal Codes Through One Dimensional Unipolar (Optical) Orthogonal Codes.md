@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "MATLAB001 Design of Two Dimensional Unipolar (Optical) Orthogonal Codes Through One Dimensional Unipolar (Optical) Orthogonal Codes"
+title:  "Design of Two Dimensional Unipolar (Optical) Orthogonal Codes Through One Dimensional Unipolar (Optical) Orthogonal Codes"
 date:   2018-11-29 08:00:00 +0530
 categories: MATLAB PROJECT CODE IEEE PAPER SIMULATION
 ---
