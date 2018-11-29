@@ -1,0 +1,11 @@
+<hr>
+
+<h2>MATLAB Project and Codes</h2>
+<ul class="list-group">
+{% for post in site.posts %}
+
+<li class="list-group"><h3><a href="{{ siteurl }}{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3></li>
+<br>
+
+{% endfor %}
+</ul>
