@@ -6,7 +6,7 @@ order: 6
 ---
 
 
-[Contact us](mailto:care@mgeek.in)
+[Contact us](mailto:prateekrajgautam.dev@gmail.com)
 ==========
 # Webmaster 
 Prateek Raj Gautam  
