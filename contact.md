@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Contact
-permalink: /contact/
+topmenu: true
+order: 6
 ---
 
 

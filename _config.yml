@@ -42,3 +42,10 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+permalink: /:path/:title/
+topmenu: [true]
+submenu: [cheatsheet]
+assets: https://raw.githubusercontent.com/mgeekin/master/assets/
+themeassets: https://raw.githubusercontent.com/mgeekin/master/assets/
