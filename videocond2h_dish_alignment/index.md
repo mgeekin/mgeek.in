@@ -2,7 +2,9 @@
 layout: page
 title: videocon d2h dish alignment
 topmenu: false
-order: 10
+submenu: true
+submenutype: subsites
+submenuindex: 9
 ---
 satellite |ST 2  - 88° E  
 ---|---  
