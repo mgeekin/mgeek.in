@@ -6,10 +6,10 @@ submenu: true
 submenutype: subsites
 submenuindex: 10
 ---
+# Sponsored Link *
 
 
-
-# Two room set for married couple or bank employ
+## Two room set for married couple or bank employ
 #####  small family may also contact.
 ---
 Address  
@@ -26,7 +26,7 @@ Direction [Google map](https://goo.gl/maps/d2tsjN3BYNv)
 ![3](https://raw.githubusercontent.com/mgeekin/tolet/3.jpg)
 
 
-# Single room set for bachalor with attached kitchen and separate bathroom may be available
+## Single room set for bachalor with attached kitchen and separate bathroom may be available
 
 ### Preview
 ![4](https://raw.githubusercontent.com/mgeekin/tolet/4.jpg)
