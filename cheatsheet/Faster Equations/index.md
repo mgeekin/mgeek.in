@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Type faster equations
-permalink: /cheatsheet/github-cheatsheet/
+permalink: /cheatsheet/Faster Equationst/
 submenu: true
 submenutype: cheatsheet
 submenuindex: 2
