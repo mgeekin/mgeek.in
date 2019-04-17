@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Github cheet sheet 2019 form mGeek.in
-permalink: /cheatsheet/github-cheatsheet/
 submenu: true
 submenutype: cheatsheet
 submenuindex: 1
