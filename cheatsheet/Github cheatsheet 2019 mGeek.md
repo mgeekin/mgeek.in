@@ -5,6 +5,8 @@ permalink: /cheatsheet/github-cheatsheet/
 submenu: true
 submenutype: cheatsheet
 submenuindex: 1
+comments: true
+
 ---
 
 ## Create a new repository

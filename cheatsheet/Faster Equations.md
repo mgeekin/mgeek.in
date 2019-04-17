@@ -5,6 +5,7 @@ permalink: /cheatsheet/Faster Equationst/
 submenu: true
 submenutype: cheatsheet
 submenuindex: 2
+comments: true
 ---
 # Learn to write equations in Markdown and convert it to docx format
 ---
