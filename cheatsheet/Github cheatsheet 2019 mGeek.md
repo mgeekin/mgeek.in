@@ -127,5 +127,7 @@ github ip
 192.30.252.153
 192.30.252.154
 ```
-
+### Force rebuild pages
+    git commit -m 'rebuild pages' --allow-empty
+    git push origin <branch>
 ![&copy; mGeek.in](http://mGeek.in)
