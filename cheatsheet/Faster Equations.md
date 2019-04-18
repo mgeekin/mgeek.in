@@ -42,18 +42,18 @@ $$\Delta$$
 
 
 
-FractionsOutput
+### FractionsOutput
 `$\frac{numerator}{denominator}$`
-$$\frac{numerator}{denominator}$$
+$$\frac{numerator}{denominator}$$  
 
 `$\frac{a}{b}$` 
-$$\frac{a}{b}$$
+$$\frac{a}{b}$$  
 
-PowersOutput
+### Powers Output
 `$a^b$`  
-$$a^b$$
+$$a^b$$  
 
-SubscriptOutput
+### SubscriptOutput
 `$a_b$`  
 $$a_b$$
 
@@ -65,19 +65,19 @@ $$(a^2\frac{a^2}{b^2})$$
 so  use `\left( and \right)`
 BracketsOutput
 `$\left($`  
-$$\left( a \right.$$
+$$\left( a \right.$$  
 `$\right($`  
-$$\left. a \right)$$
+$$\left. a \right)$$  
 `$\left( a \right)$`  
-$$\left( a^2\frac{a^2}{b^2} \right)$$
+$$\left( a^2\frac{a^2}{b^2} \right)$$  
 `$\left[$`  
-$$\left[ a \right.$$
+$$\left[ a \right.$$  
 `$\right]$`  
-$$\left. a \right]$$
+$$\left. a \right]$$  
 `$\left[ a \right\$`  
-$$\left[a^2\frac{a^2}{b^2} \right]$$
+$$\left[a^2\frac{a^2}{b^2} \right]$$  
 `$E=mc^2$`
-$$E=mc^2$$
+$$E=mc^2$$  
 
 
 
