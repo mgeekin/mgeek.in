@@ -25,60 +25,59 @@ comments: true
 
 ### Symbols
 
-Code Output
-:---::---:
 `$\alpha$`  
-$\alpha$
+$$\alpha$$
 `$\beta$`  
-$\beta$
+$$\beta$$
 `$\delta$`  
-$\delta$  
+$$\delta$$  
 `$\rho$`  
-$\rho$  
+$$\rho$$  
 `$\omega$`  
-$\omega$  
+$$\omega$$  
 `$\Omega$`  
-$\Omega$  
+$$\Omega$$  
 `$\Delta$`  
-$\Delta$  
+$$\Delta$$  
 
 
 
 FractionsOutput
 `$\frac{numerator}{denominator}$`
-$\frac{numerator}{denominator}$
+$$\frac{numerator}{denominator}$$
 
 `$\frac{a}{b}$` 
-$\frac{a}{b}$
+$$\frac{a}{b}$$
 
 PowersOutput
 `$a^b$`  
-$a^b$
+$$a^b$$
 
 SubscriptOutput
 `$a_b$`  
-$a_b$
+$$a_b$$
 
 
 ### Brackets
 simple `()` are not because brackets done resize to cover content like below
-`$(\frac{a}{b)$` $(a^2\frac{a^2}{b^2})$  
+`$(\frac{a}{b)$` 
+$$(a^2\frac{a^2}{b^2})$$  
 so  use `\left( and \right)`
 BracketsOutput
 `$\left($`  
-$\left( a \right.$
+$$\left( a \right.$$
 `$\right($`  
-$\left. a \right)$
+$$\left. a \right)$$
 `$\left( a \right)$`  
-$\left( a^2\frac{a^2}{b^2} \right)$   
+$$\left( a^2\frac{a^2}{b^2} \right)$$
 `$\left[$`  
-$\left[ a \right.$
+$$\left[ a \right.$$
 `$\right]$`  
-$\left. a \right]$
+$$\left. a \right]$$
 `$\left[ a \right\$`  
-$\left[a^2\frac{a^2}{b^2} \right]$
+$$\left[a^2\frac{a^2}{b^2} \right]$$
 `$E=mc^2$`
-$E=mc^2$
+$$E=mc^2$$
 
 
 
