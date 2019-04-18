@@ -105,4 +105,7 @@ $$V=l\frac{\delta i}{\delta t}$$
 
 $$\nabla \times \overrightarrow E= - \frac{\partial \overrightarrow B}{\partial t}$$  
 
-$$\left\begin{matrix}a\ b\ c\\d\ e\ f\\ g\ h\ i \end{matrix}\right$$  
+
+$$\begin{bmatrix}a\ b\ c\\d\ e\ f\\ g\ h\ i \end{bmatrix}$$
+
+$$\left|\begin{matrix}a\ b\ c\\d\ e\ f\\ g\ h\ i \end{matrix}\right|$$  
