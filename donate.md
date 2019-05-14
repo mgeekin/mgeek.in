@@ -6,5 +6,5 @@ order: 20
 ---
 
 
-![Scan and Pay](/assets/QR/mGeek.in-Q41275752.png)
-![Download QR pdf](/assets/QR/mGeek.in-Q41275752.pdf)
+![Scan and Pay]({{site.assets}}QR/mGeek.in-Q41275752.png)
+![Download QR pdf]({{site.assets}}QR/mGeek.in-Q41275752.pdf)
