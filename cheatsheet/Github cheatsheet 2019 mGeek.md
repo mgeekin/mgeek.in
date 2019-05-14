@@ -124,11 +124,16 @@ Now the generated ssh key is on the clipboard paste it on the https://github.com
 ## Hosting
 ### github pages domain and subdomain redirect
 github ip
-```
-192.30.252.153
-192.30.252.154
-```
+    ```
+    192.30.252.153
+    192.30.252.154
+    ```
 ### Force rebuild pages
-    git commit -m 'rebuild pages' --allow-empty
-    git push origin <branch>
-![&copy; mGeek.in](http://mGeek.in)
+
+```
+git commit -m 'rebuild pages' --allow-empty
+git push origin <branch>
+
+```
+
+[&copy; mGeek.in](http://mGeek.in)
