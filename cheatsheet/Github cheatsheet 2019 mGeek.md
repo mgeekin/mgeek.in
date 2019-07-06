@@ -23,8 +23,6 @@ git remote add origin git@github.com:User/UserRepo.git
 ### To change the url of an existing remote repository
 ```
 git remote set-url origin git@github.com:User/UserRepo.git
-```
-```
 git push -u origin master
 ```  
 
@@ -40,7 +38,7 @@ add all the changes/modifications to staging area
 `git commit -m"your comment"` will commit the changes with your comment  
 `git push master origin`  
 or    
-`git push` is used to push local commited changes to master branch of origin 
+`git push` is used to push local commits (changes) to master branch of origin 
 
 `git pull` is used to sync down changes to local git repo
 
@@ -67,6 +65,7 @@ Download and install the Git command line extension. You only have to set up Git
 Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
 ```
 git lfs track "*.psd"
+git lfs track "*.mat"
 ```
 
 Make sure .gitattributes is tracked
@@ -82,7 +81,6 @@ git large files
 git reset HEAD \*
 git checkout -- .
 ```
-
 ### Reset local git  
 
 ```
@@ -90,7 +88,6 @@ git reset
 git checkout .
 git clean -fdx
 ```
-
 ---
 ## Github.com
 ### setup local account
@@ -98,7 +95,9 @@ git clean -fdx
 Open Git Bash.
 Paste the text below, substituting in your GitHub email address.
 
-`ssh-keygen -t rsa -b 4096 -C "your_github_email@gmail.com"`
+```
+ssh-keygen -t rsa -b 4096 -C "your_github_email@gmail.com"
+```
 
 This creates a new ssh key, using the provided email as a label.
 Generating public/private rsa key pair.  
@@ -111,8 +110,10 @@ Enter passphrase (empty for no passphrase): [Type a passphrase]
 Enter same passphrase again: [Type passphrase again]
 
 
-`eval $(ssh-agent -s)`  
-`clip < ~/.ssh/id_rsa.pub`
+```
+eval $(ssh-agent -s)
+clip < ~/.ssh/id_rsa.pub
+```
 
 Now the generated ssh key is on the clipboard paste it on the https://github.com/settings/keys
 
@@ -123,16 +124,16 @@ Now the generated ssh key is on the clipboard paste it on the https://github.com
 ---
 ## Hosting
 ### github pages domain and subdomain redirect
-github ip
-    ```
-    192.30.252.153
-    192.30.252.154
-    ```
+github ip  
+```
+192.30.252.153
+192.30.252.154
+```
 ### Force rebuild pages
 
 ```
 git commit -m 'rebuild pages' --allow-empty
-git push origin <branch>
+git push origin master
 
 ```
 
