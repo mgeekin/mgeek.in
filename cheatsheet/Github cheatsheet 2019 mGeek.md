@@ -69,7 +69,7 @@ git lfs track "*.mat"
 ```
 
 Make sure .gitattributes is tracked
-```
+```git
 git add .gitattributes
 git large files
 ```
@@ -77,13 +77,13 @@ git large files
 ## Recover files
 
 ### Recover file form local .git
-```
+```git
 git reset HEAD \*
 git checkout -- .
 ```
 ### Reset local git  
 
-```
+```git
 git reset
 git checkout .
 git clean -fdx
@@ -95,7 +95,7 @@ git clean -fdx
 Open Git Bash.
 Paste the text below, substituting in your GitHub email address.
 
-```
+```shell
 ssh-keygen -t rsa -b 4096 -C "your_github_email@gmail.com"
 ```
 
@@ -110,8 +110,9 @@ Enter passphrase (empty for no passphrase): [Type a passphrase]
 Enter same passphrase again: [Type passphrase again]
 
 
-```
-eval $(ssh-agent -s)
+```shell
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/*_rsa
 clip < ~/.ssh/id_rsa.pub
 ```
 
