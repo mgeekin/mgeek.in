@@ -55,7 +55,7 @@ then add 3 arguments
 
 now change defaults to  `PdfLaTeX+MakeIndex+BibTeX`
 
-![](https://i.imgur.com/g0E9bdf.gifv)
+![](https://i.imgur.com/g0E9bdf.gif)
 
 
 Do comment if it works for you.
