@@ -8,12 +8,34 @@ comments: true
 
 ---
 
-You can turn on automatic spell-checking of your source document from Edit ?Spelling?<language>. It is also possible to ask TEXworks to enable spell-checking by default by setting a dictionary in Edit?Preferences…?Editor?Spell-check language.
+Go to texworks
 
-During typing, every word the spell-checker considers wrong is underlined by a red wavy line. A right-click on the word opens a contextual menu in which there are some replacement suggestions. Click on the desired word to make the replacement.
+`File>Edit>Preferences>Editor>Spell-check language.`  
 
-Before using the spell-checker, you need to install dictionaries in the right folder of TEXworks: <resources>\dictionaries. The <resources> folder can be accessed easily via Help?Settings and Resources….
+Download and install spellcheck dictionary
 
-On Linux, the dictionaries are usually taken from the folder /usr/share/myspell/dicts—the default path for myspell dictionaries. Note, though, that the maintainer of your TEXworks package may have changed this to reflect the file system layout of your Linux distribution. You can override this default by setting the TW_DICPATH environment variable before running TEXworks.
+[WEB URL](https://extensions.libreoffice.org/extensions/english-dictionaries)
 
-One can use the available dictionaries for OpenOffice.org and other free software;2 if you have Mozilla Thunderbird with spell-checking, you can copy its .aff and .dic files as well, for example.
+[Download Link](https://extensions.libreoffice.org/extensions/english-dictionaries/2019-07.01/@@download/file/dict-en-20190701.oxt)
+
+![](https://i.imgur.com/WULoEBc.gif)
+
+Extract english .dic and .aff file from the download.
+
+![](https://i.imgur.com/e33Pwyf.gif)
+
+`Help>Settings and Resources`  
+
+
+
+go to `C:\Users\PRATEEK\.texlive2019\texmf-config\texworks`  and 
+
+create `dictionaries`  folder and move the   `.dic` and `.aff` files
+
+
+
+select spell check as
+
+![](https://i.imgur.com/3YTH2Pz.gif)
+
+
