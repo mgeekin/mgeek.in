@@ -118,6 +118,49 @@ clip < ~/.ssh/id_rsa.pub
 
 Now the generated ssh key is on the clipboard paste it on the https://github.com/settings/keys
 
+#### SSH configuration on linux (linuxmint tested)
+
+```
+sudo apt-get install xclip corkscrew
+```
+
+add line to ~/.ssh/ssh_config
+```    
+    ProxyCommand corkscrew proxyaddress proxyport %h %p ~/.ssh/proxyauth
+    ProxyCommand corkscrew 172.31.100.26 3128 %h %p ~/.ssh/proxyauth
+```
+then create a file proxyauth in .ssh folder
+first line with username and password as
+
+`username:password`
+
+* you may have to copy proxyauth to /home/username/.ssh/
+
+CREATE ssh key on linux terminal
+
+FOR creating and adding ssh key 
+```bash
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+xclip -sel clip < ~/.ssh/id_rsa.pub
+```
+
+then go to 
+`github.com/settings/keys`
+
+and add copied ssh key
+
+
+Verify with 
+`ssh -T git@github.com`
+
+
+and clone git using ssh url (don't use https)
+
+
+
+
 
 
 
