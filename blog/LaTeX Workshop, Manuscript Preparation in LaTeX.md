@@ -12,6 +12,12 @@ submenuindex: 4
 
 ---  
 
+### Speaker: Mr. Preteek Raj Gautam, MNNIT Allahabad   
+
+### Date 16th-17th August 2020  
+
+### Time: 5pm-7pm IST  
+
 
 ## [Registration link](https://tinyurl.com/y4bmodfn)
 
