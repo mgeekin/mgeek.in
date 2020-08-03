@@ -1,13 +1,13 @@
 ---
 layout: page
-title: LaTeX Workshop, Manuscript Preparation in LaTeX
+title: LaTeX Webinar, Manuscript Preparation in LaTeX
 topmenu: false
 submenu: true
 submenutype: blog
 submenuindex: 4
 comments: true
 ---
-# LaTeX Workshop, Manuscript Preparation in LaTeX
+# LaTeX Webinar, Manuscript Preparation in LaTeX
 
 ## Organised by ETmantra elearning solutions
 
