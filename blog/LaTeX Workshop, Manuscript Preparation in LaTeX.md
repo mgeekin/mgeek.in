@@ -6,6 +6,11 @@ submenu: true
 submenutype: blog
 submenuindex: 4
 ---
+# LaTeX Workshop, Manuscript Preparation in LaTeX
+
+## Organised by ETmantra elearning solutions
+
+---  
 
 
 ## [Registration link](https://tinyurl.com/y4bmodfn)
