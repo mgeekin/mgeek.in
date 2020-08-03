@@ -46,6 +46,6 @@ plugins:
 
 permalink: /:path/:title/
 topmenu: [true]
-submenu: [cheatsheet, subsites, showcase]
+submenu: [cheatsheet, subsites, showcase, blog]
 assets: https://raw.githubusercontent.com/mgeekin/master/assets/
 themeassets: https://raw.githubusercontent.com/mgeekin/master/assets/
