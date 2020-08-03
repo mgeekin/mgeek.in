@@ -30,7 +30,7 @@ Pay using Gpay or Phonepe on **7906661452**
 Know more from [ETmantra](https://etmantra.com/)
 
 ## Banner
-<img src="http://mgeek.in/blog/images/Banner.jpg" alt="Banner" width="90vw"/>
+<img src="http://mgeek.in/blog/images/Banner.jpg" alt="Banner" width="800px"/>
 
 
 ![Banner](http://mgeek.in/blog/images/Banner.jpg =800x)
