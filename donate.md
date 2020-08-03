@@ -17,7 +17,9 @@ order: 20
 </div>
 
 <div style="padding:20px;margin:20px auto;text-align:center">
-<form><script src="https://cdn.razorpay.com/static/widget/payment-button.js" data-payment_button_id="pl_FMMPeiAvuedjUH" data-button_text="Pay Now" data-button_theme="rzp-dark-standard"> </script> </form>
+<form>Pay in INR<script src="https://cdn.razorpay.com/static/widget/payment-button.js" data-payment_button_id="pl_FMMPeiAvuedjUH" data-button_text="Pay Now" data-button_theme="rzp-dark-standard"> </script> </form>
+
+<form>Pay in USD<script src="https://cdn.razorpay.com/static/widget/payment-button.js" data-payment_button_id="pl_FMMPeiAvuedjUH" data-button_text="Pay Now" data-button_theme="rzp-dark-standard"> </script> </form>
 </div>
 
 <div style="padding:20px;margin:20px auto;text-align:center">
