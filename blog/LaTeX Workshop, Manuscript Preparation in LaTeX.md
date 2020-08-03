@@ -22,9 +22,7 @@ submenuindex: 4
 ## [Registration link](https://tinyurl.com/y4bmodfn)
 
 [https://tinyurl.com/y4bmodfn](https://tinyurl.com/y4bmodfn)  
-
 or  
-
 [https://docs.google.com/forms/d/e/1FAIpQLScLYVDuK0044fTGM-YY5MHSk8oOFU-rWKNPkCZHI3uta7o0BA/viewform](https://docs.google.com/forms/d/e/1FAIpQLScLYVDuK0044fTGM-YY5MHSk8oOFU-rWKNPkCZHI3uta7o0BA/viewform)
 
 ## Registration fees:  
@@ -34,6 +32,7 @@ Pay using Gpay or Phonepe on **7906661452**
 ### USD:2  
 Pay via paypal at [**paypal.me/raghavendrapal**](https://paypal.me/raghavendrapal)
 
+---  
 
 ## Certificate will be provided from ETmantra
 
