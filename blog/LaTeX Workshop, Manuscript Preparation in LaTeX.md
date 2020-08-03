@@ -37,7 +37,7 @@ Pay via paypal at [**paypal.me/raghavendrapal**](https://paypal.me/raghavendrapa
 
 ## e-Certificate will be provided from ETmantra
 
-Know more from [ETmantra](https://etmantra.com/)
+Know more from [ETmantra](https://etmantra.com/product/manuscript-preparation-using-latex-workshop/)
 
 ## Banner
 <img src="http://mgeek.in/blog/images/Banner.jpg" alt="Banner" width="800px"/>
