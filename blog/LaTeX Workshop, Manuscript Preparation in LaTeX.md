@@ -13,7 +13,7 @@ comments: true
 
 ---  
 
-### Speaker: Mr. Preteek Raj Gautam
+### Speaker: Mr. Prateek Raj Gautam
 
 ### Date 16th-17th August 2020  
 
