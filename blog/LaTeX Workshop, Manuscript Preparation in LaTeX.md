@@ -13,7 +13,7 @@ comments: true
 
 ---  
 
-### Speaker: Mr. Preteek Raj Gautam, MNNIT Allahabad   
+### Speaker: Mr. Preteek Raj Gautam
 
 ### Date 16th-17th August 2020  
 
