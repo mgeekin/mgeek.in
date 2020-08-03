@@ -5,6 +5,7 @@ topmenu: false
 submenu: true
 submenutype: blog
 submenuindex: 4
+comments: true
 ---
 # LaTeX Workshop, Manuscript Preparation in LaTeX
 
