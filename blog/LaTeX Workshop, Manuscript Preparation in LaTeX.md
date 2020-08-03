@@ -33,6 +33,6 @@ Know more from [ETmantra](https://etmantra.com/)
 <img src="http://mgeek.in/blog/images/Banner.jpg" alt="Banner" width="800px"/>
 
 
-![Banner](http://mgeek.in/blog/images/Banner.jpg =800x)
+[Download Banner](http://mgeek.in/blog/images/Banner.jpg)
 
 
