@@ -35,7 +35,7 @@ Pay via paypal at [**paypal.me/raghavendrapal**](https://paypal.me/raghavendrapa
 
 ---  
 
-## Certificate will be provided from ETmantra
+## e-Certificate will be provided from ETmantra
 
 Know more from [ETmantra](https://etmantra.com/)
 
