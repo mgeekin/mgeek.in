@@ -27,9 +27,13 @@ or
 
 [https://docs.google.com/forms/d/e/1FAIpQLScLYVDuK0044fTGM-YY5MHSk8oOFU-rWKNPkCZHI3uta7o0BA/viewform](https://docs.google.com/forms/d/e/1FAIpQLScLYVDuK0044fTGM-YY5MHSk8oOFU-rWKNPkCZHI3uta7o0BA/viewform)
 
-## Registration fees: INR:100/-
-
+## Registration fees:  
+### INR:100
 Pay using Gpay or Phonepe on **7906661452**
+
+### USD:2  
+Pay via paypal at [**paypal.me/raghavendrapal**](https://paypal.me/raghavendrapal)
+
 
 ## Certificate will be provided from ETmantra
 
