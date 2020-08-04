@@ -67,7 +67,8 @@ double click on install-tl or right click on install-tl and select open in termi
 
 The script will complete installation in around 20min to 60min
 
-after installation of all packages 
+after installation of all packages   
+
 <img src="https://i.imgur.com/aw2kLSR.png" alt="Banner" width="400px"/>
 <img src="https://i.imgur.com/UyoirI8.png" alt="Banner" width="400px"/>  
 
