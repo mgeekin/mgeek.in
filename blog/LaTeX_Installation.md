@@ -35,7 +35,7 @@ https://github.com/TeXworks/texworks/releases
 ---  
 
 ### Mount downloaded texlive.iso to virtual drive
-On linux, windows 8, or windows 10,  
+On Linux, windows 8, or windows 10,  
 double click to mount downloaded texlive.iso image in to virtual drive.
 
 for older versions of windows you might need virtual drive software like:   
@@ -74,7 +74,7 @@ after installation of all packages
 
 click close
 
-## Npw you are ready to use LaTeX. Find Texworks in installed program and run it.
+## Now you are ready to use LaTeX. Find Texworks in installed program and run it.
 
 
 ---  
