@@ -24,7 +24,7 @@ It can be downloaded from [https://ctan.org/tex-archive/systems/texlive/Images?l
 
 
 
-<img src="http://mgeek.in\blog\LaTeX_Installation\DownloadTexlive.gif" alt="Banner" width="800px"/>
+<img src="http://mgeek.in\blog\LaTeX_Installation\DownloadTexlive.gif" alt="Banner" width="800px" style="padding:5px;margin:5px;background-color:grey;border-radius:5px;box-shadow:2px 2px 2px black;"/>
 [](mgeek.in\blog\LaTeX_Installation\DownloadTexlive.gif)
 
 
@@ -62,15 +62,15 @@ The script will complete installation in around 20min to 60min
 double click on install-tl or right click on install-tl and select open in terminal. Follow the installer instructions.
 
 
-<img src="http://mgeek.in\blog\LaTeX_Installation\MountAndInstall.gif" alt="Banner" width="800px"/>
+<img src="http://mgeek.in\blog\LaTeX_Installation\MountAndInstall.gif" alt="Banner" width="800px" style="padding:5px;margin:5px;background-color:grey;border-radius:5px;box-shadow:2px 2px 2px black;"/>
 [](mgeek.in\blog\LaTeX_Installation\MountAndInstall.gif)  
 
 The script will complete installation in around 20min to 60min
 
 after installation of all packages   
 
-<img src="https://i.imgur.com/aw2kLSR.png" alt="Banner" width="400px"/>
-<img src="https://i.imgur.com/UyoirI8.png" alt="Banner" width="400px"/>  
+<img src="https://i.imgur.com/aw2kLSR.png" alt="Banner" width="400px" style="padding:2px;margin:2px;background-color:grey;border-radius:2px;box-shadow:2px 2px 2px black;border:1px solid black"/>
+<img src="https://i.imgur.com/UyoirI8.png" alt="Banner" width="400px" style="padding:2px;margin:2px;background-color:grey;border-radius:2px;box-shadow:2px 2px 2px black;border:1px solid black"/>  
 
 click close
 
