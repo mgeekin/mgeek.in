@@ -74,6 +74,7 @@ after installation of all packages
 
 click close
 
+## Npw you are ready to use LaTeX. Find Texworks in installed program and run it.
 
 
 ---  
