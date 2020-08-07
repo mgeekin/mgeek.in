@@ -85,7 +85,15 @@ click close
 sudo apt-get install texlive texworks
 ```
 
-## windows users may also try
+## alternatively windows users may also try 
 
 https://miktex.org/  
 https://www.tug.org/protext/  
+
+
+# In case of problem with installation 
+
+
+## [visit here](https://latex.js.org/playground.html)   
+
+---
