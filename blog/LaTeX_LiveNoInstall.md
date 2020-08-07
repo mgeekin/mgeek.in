@@ -9,7 +9,7 @@ comments: true
 ---
 # LaTeX Live No Install
 
-```html
+<div>
 <script type="module">
     import { LaTeXJSComponent } from "https://cdn.jsdelivr.net/npm/latex.js/dist/latex.mjs"
     customElements.define("latex-js", LaTeXJSComponent)
@@ -42,4 +42,4 @@ comments: true
   <latex-js hyphenate="false">
     Another.
   </latex-js>
-```
+</div>
