@@ -25,7 +25,7 @@ github_username:  mgeekin
 
 # Build settings
 markdown: kramdown
-theme: conference-mgeek.in-jekyll-theme
+#theme: conference-mgeek.in-jekyll-theme
 remote_theme: mgeekin/conference-mgeek.in-jekyll-theme
 
 plugins:
