@@ -46,3 +46,13 @@ Know more from [ETmantra](https://etmantra.com/product/manuscript-preparation-us
 [Download Banner](http://mgeek.in/blog/images/Banner.jpg)
 
 
+#  Schedule  
+
+<img src="http://mgeek.in/blog/images/Schedule.jpg" alt="Banner" width="800px" style="padding:5px;margin:5px;background-color:grey;border-radius:5px;box-shadow:2px 2px 2px black;"/>
+
+
+While joining meet change video receive quality to 720p as shown below
+
+<img src="https://i.imgur.com/uxm16g0.gif" alt="Banner" width="800px" style="padding:5px;margin:5px;background-color:grey;border-radius:5px;box-shadow:2px 2px 2px black;"/>
+
+<img src="https://i.imgur.com/qyD0Pin.gif" alt="Banner" width="800px" style="padding:5px;margin:5px;background-color:grey;border-radius:5px;box-shadow:2px 2px 2px black;"/>
