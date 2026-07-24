@@ -1,0 +1,6 @@
+./
+./Ipynb
+./List
+./Markdown
+./Office Files
+./Pdf
