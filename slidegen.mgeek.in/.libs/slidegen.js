@@ -1,13 +1,11 @@
-
-const slidegenlicense = "copyrights mGeek.in & Prateek Raj Gautam, soon to be released under Apache 2.0";
-const slidegenversion = `v1.0.6`;
-const slidegenTitleSuffix ="SlideGen";
+const slidegenlicense = "copyrights mGeek.in and Dr. Prateek Raj Gautam, soon to be released under Apache 2.0";
+const slidegenversion = `v1.0.1`;
 
 const setSlidegenTitle = () =>{
     setTimeout(()=>{
         try{ 
           document.title = grab("h1,h2,h3,h4,h5,h6,p")[0].innerHTML;
-          grab("title[0]").innerText = grab("h1,h2,h3,h4,h5,h6,p,span[0]").innerText + " | " + slidegenTitleSuffix;
+          grab("title[0]").innerText = grab("h1,h2,h3,h4,h5,h6,p,span[0]").innerText;
         }  
         catch (e) {}
         },1000
@@ -18,6 +16,7 @@ const setSlidegenTitle = () =>{
 var slideScss = `
 
 /* main.js/slideScss*/
+
 @import url("https://fonts.googleapis.com/css2?family=Cantarell&display=swap");
 
 :root {
@@ -325,7 +324,7 @@ table {
                 padding-inline:.5em;
                 cursor: hand;
 
-                a,.slideNavLink {
+                a {
                     background-color: hsl(var(--hue), 50%, 95%);
                     color: var(--accentColor, hsl(var(--hueAscent), 80%, 20%));
                     border-radius: 5px;
@@ -541,79 +540,86 @@ table {
     cursor: pointer;
 }
 
+
+
 `;
 
 
 
 
-var pdfdialogscss = `
+var pdfdialogscss=`
 
-.pdfdialog {
-    position        : absolute;
-    top             : 10%;
-    left            : 10%;
-    width           : 80%;
-    height          : 80%;
-    border-radius   : 2em;
-    border          : 1px solid var(--ascentColor);
-    background-color: hsla(var(--hue), var(--sat), var(--light), .3);
-    display         : flex;
-    flex-direction  : column;
-    overflow        : auto;
-    box-shadow      : 2px 5px 15px gray;
-    backdrop-filter : blur(8px);
 
-    .download {
-        max-width : 15em;
-        padding   : 1em;
-        margin    : 2em 0;
-        display   : flex;
-        align-self: center;
+.pdfdialog{
+   position: absolute;
+   top:10%;
+   left:10%;
+   width:80%;
+   height: 80%;
+   border-radius: 2em;
+   border:1px solid var(--ascentColor);
+   background-color: hsla(var(--hue),var(--sat),var(--light),.3);
+   display: flex;
+   flex-direction: column;
+   overflow: auto;
+   box-shadow: 2px 5px 15px gray;
+   backdrop-filter:blur(4px);
 
+  
+  .download {
+    max-width: 15em;
+    padding:1em;
+    margin: 2em 0;
+    display:flex;
+    align-self:center;
+    
+  }
+  
+  .mainpdf{
+    height: 100%;  
+  }
+  
+    &:modal{    
+    backdrop-filter: blur(10px);
+    box-shadow: 1px 1px 1em white;
+  }
+  
+
+  .closedialog{
+    position: absolute;
+    top:1em;
+    right:1em;
+    transform: translateY(50%) rotate(45deg); 
+    padding:2em;
+    cursor:pointer;
+    &:after{
+      
+      content:"";
+      position: absolute;
+      top:0;
+      left:0;
+      background-color: white;
+      width:1.5em;
+      height: 2px; 
+      transform: translateY(50%) rotate(90deg); 
     }
 
-    .mainpdf {
-        height: 100%;
-    }
-
-    .closedialog {
-        position : absolute;
-        top      : 1em;
-        right    : 1em;
-        transform: translateY(50%) rotate(45deg);
-        padding  : 2em;
-        cursor   : pointer;
-
-        &:after {
-
-            content         : "";
-            position        : absolute;
-            top             : 0;
-            left            : 0;
-            background-color: white;
-            width           : 1.5em;
-            height          : 2px;
-            transform       : translateY(50%) rotate(90deg);
-        }
-
-        &:before {
-            content         : "";
-            position        : absolute;
-            top             : 0;
-            left            : 0;
-            background-color: white;
-            width           : 1.5em;
-            height          : 2px;
-
-        }
-    }
-
-    &:modal {
-        backdrop-filter: blur(10px);
-        box-shadow     : 1px 1px 1em white;
-    }
+    &:before{
+      content:"";
+      position: absolute;
+      top:0;
+      left:0;
+      background-color: white;
+      width:1.5em;
+      height: 2px; 
+   
+  }
 }
-`;
+  
+  
+}
+`
+//loadscss(slideScss)
 
 function openFile() {
   var fileObj = grab("#open")[0].files[0];
@@ -628,7 +634,7 @@ function openFile() {
     parseNotebook(fileUrl,mathjaxHljsCopyIcon);
   }
   // updateFiledropEventListeners()
-};
+}
 
 function cloneView() {
   var url = window.location.href;
@@ -638,9 +644,9 @@ function cloneView() {
     href: window.location.href,
     target: "_blank",
   }).click();
-};
+}
 
-function toggleHints() { };
+function toggleHints() { }
 
 // Fullscreen
 function toggleFullscreen() {
@@ -656,7 +662,7 @@ function toggleFullscreen() {
       grab("h1")[0].innerHTML;
     // append(main, gen(div, "fullscreenTitle", titlestr), 'before')
   }
-};
+}
 
 document.addEventListener("dblclick", (e) => {
   if (document.activeElement.tagName.toLowerCase() === "input") {
@@ -692,7 +698,7 @@ function scrollAction(direction = "down", scrollState) {
     scrollState -= 1;
     grab(`#slideroot`)[0].scrollTop = scrollState * offsetHeight;
   }
-};
+}
 
 // Keyboard Control
 function keyPressHandler(e) {
@@ -762,7 +768,7 @@ function keyPressHandler(e) {
     grab("#open")[0].click();
   }
   e.stopPropagation();
-};
+}
 
 
 
@@ -808,9 +814,16 @@ const convertLocalLinks = () => {
         }catch(e){}
       })
       
-    });
+    })
 
   }, 2000);
+
+
+// setTimeout(()=>{
+//   try{ 
+//       document.title = grab("h1,h2,h3,h4,h5,h6,p")[0].innerHTML;
+//   }  catch (e) { }
+// },1000)
 
 setSlidegenTitle();
 };
@@ -826,7 +839,7 @@ function loadBasicSkeleton(title = "Home") {
   append(main, gen(div, "appmain", "", "appmain container"));
   append(app, gen(footer, "appfooter", "", "footer"));
   append(appmain, gen(section, "hero", "", "hero"));
-};
+}
 
 function dict2hash(dict) {
   var hash = "";
@@ -838,7 +851,7 @@ function dict2hash(dict) {
     }
   });
   return hash;
-};
+}
 
 function hash2dict(hash) {
   var dict = {};
@@ -851,7 +864,7 @@ function hash2dict(hash) {
       dict[keyval[0]] = keyval[1];
     });
   return dict;
-};
+}
 
 class Router {
   constructor() {
@@ -864,7 +877,7 @@ class Router {
 
     this.updateroute();
     return this.hash;
-  };
+  }
 
   readfromurl() {
     this.host = window.location.host;
@@ -872,7 +885,7 @@ class Router {
     this.pathname = window.location.pathname;
     this.root = this.protocol + this.host + this.pathname;
     this.origin = window.location.origin;
-  };
+  }
 
   readHash() {
     this.hash = window.location.hash;
@@ -893,7 +906,7 @@ class Router {
         this.hashObj[keyval[0]] = keyval[1];
       });
     this.setdirpath(this.dir, this.file);
-  };
+  }
 
   updateroute() {
     this.filepath = this.root;
@@ -913,8 +926,13 @@ class Router {
       this.filepath += this.file;
     }
 
+    var oldhash = window.location.hash;
+    if (oldhash != this.hash) {
+      window.location.hash = this.hash;
+    }
     window.location.hash = this.hash;
-  };
+    // this.setdirpath(this.dir, this.file)
+  }
 
   setdirpath(dir = "", file = "", url = window.location.origin) {
     // window.location.href = url
@@ -924,18 +942,20 @@ class Router {
   }
   get view() {
     return this.filepath;
-  };
+  }
 
   set setfile(file) {
     this.file = file;
+
     this.updateroute();
-  };
+  }
 
   set setdir(dir) {
     this.dir = dir;
+
     this.updateroute();
-  };
-};
+  }
+}
 const router = new Router();
 
 function footerButtons() {
@@ -968,7 +988,7 @@ function footerButtons() {
     `#footerButtons`,
     gen(input, "open", "", "hide", {
       type: "file",
-      accept: ".md,.markdown,.ipynb,png,jpg,mp4,csv",
+      accept: ".md,.markdown,.ipynb,png,jpg,mp4",
       onchange: "openFile()",
       multiple: "true",
     })
@@ -979,7 +999,7 @@ function footerButtons() {
     gen(label, "openbtn", "Open", "button,openFile", { for: "open",
       title:"Open local markdown(.md) or interactive python notebook(.ipynb)", })
   );
-};
+}
 
 function generateView() {
   if (grab("#appmain").length != 0) {
@@ -991,7 +1011,7 @@ function generateView() {
   var file = router.file;
   if (file.length == 0) {
     router.setfile = "list.txt";
-  };
+  }
 
   var ext = file.split(".").pop();
   const route = {
@@ -1018,7 +1038,7 @@ function generateView() {
 
   // updateFiledropEventListeners()
 
-};
+}
 
 
 
@@ -1035,10 +1055,10 @@ function downloadURL(
   append(main,gen(a,"tempdownload","Download " + FileName,"hide",{href:fileListUrl,target:"_blank",download:FileName}))
   setTimeout(() => {
     grab("#tempdownload[0]").click()
-    append("#tempdownload","",'r');
+    append("#tempdownload","",'o');
   }, 1000);
   
-};
+}
 
 
 
@@ -1061,7 +1081,7 @@ async function filedetect() {
     });
   });
   return presentfile;
-};
+}
 
 function updateOnHashChange() {
   window.removeEventListener("hashchange", updateOnHashChange);
@@ -1080,7 +1100,7 @@ function updateOnHashChange() {
 
   reloadPage();
   
-};
+}
 
 function reloadPage() {
   sessionStorage.clear();
@@ -1091,48 +1111,29 @@ function reloadPage() {
   window.scrollTo(0, 0);
   window.addEventListener("hashchange", updateOnHashChange);
   // convertLocalLinks()
-};
+}
 
 
 function printSlides(){
   loadscss(printSlideStyle,"printSlideStyle");
-  window.print();
-};
+  window.print()
+}
 
 function printNotes(){
   loadscss(printNotesStyle,"printNotesStyle");
-  window.print();
-};
-
-function appendBackButton() {
-  if (grab("#back").length != 0) {
-    append("#back", "", "replace");
-  };
-
-  append(
-    `#location`,
-    gen(span, "back", "Back", "pathNavigator", {
-      "data-path":router.dirpath,
-      "data-dir":router.dir,
-      onclick: "changepath(this)",
-      tabindex: 20,
-    })
-  );
-};
-
+  window.print()
+}
 function changepath(thispath) {
   // log(thispath.dataset.path)
-  // var path = thispath.dataset.path;
-  var dir = thispath.dataset.dir;
+  var path = thispath.dataset.path;
   var origin = window.location.origin;
-  // pathname = path.replace(origin, "");
+  pathname = path.replace(origin, "");
+  // log(pathname)
   var router = new Router();
-  // log(dir)
-  router.setfile = "";
-  router.setdir = dir;
+  router.setdir = pathname;
 
-  // window.location.pathname = "/";
-};
+  window.location.pathname = "/";
+}
 
 function paginationUpdate(loc = "") {
   // var router = new Router()
@@ -1140,7 +1141,7 @@ function paginationUpdate(loc = "") {
   loc = router.pathname + router.dir;
   if (grab("#location").length != 0) {
     append("#location", "", "replace");
-  };
+  }
 
   // try { append(`#location`, "", "replace") } catch { }
   append(`#header`, gen(nav, "location", ""));
@@ -1150,14 +1151,13 @@ function paginationUpdate(loc = "") {
   var printLocation = loc.replaceAll("https://", "").replaceAll("http://", "");
   printLocation.split("/").forEach((l) => {
     if (l.length > 0) {
-      l = l.replaceAll(/(\%20|\s)+/g," ")
       // log(l)
       path += l + "/";
+      // append("#location", gen(a, '', l, 'pathNavigator', root + path, { "onclick": "updateOnHashChange()" }))
       append(
         "#location",
-        gen(span, "", l, "pathNavigator", {
+        gen(a, "", l, "pathNavigator", {
           "data-path": root + path,
-          "data-dir":path,
           onclick: "changepath(this)",
           tabindex: 20,
         })
@@ -1166,7 +1166,7 @@ function paginationUpdate(loc = "") {
     }
   });
   // generateView()
-};
+}
 
 loadBasicSkeleton();
 
@@ -1174,10 +1174,10 @@ function appendDir(e) {
   var newDir = router.dir + e.dataset.dir;
   newDir = newDir.replaceAll("//", "/").replaceAll("\\\\", "\\");
   router.setdirpath(newDir, "");
-};
+}
 function appendfile(e) {
   router.setdirpath(router.dir, e.dataset.file);
-};
+}
 
 function parselist(
   fileListUrl = window.location.origin + window.location.pathname + "list.txt",
@@ -1206,7 +1206,6 @@ function parselist(
         var ext = link.split(".").pop();
         // log(ext)
         if (
-          link.length > 3 &&
           link[2] != "." &&
           !link.includes(".md") &&
           !link.includes(".ipynb") &&
@@ -1236,7 +1235,7 @@ function parselist(
               })
             );
           }
-        };
+        }
 
         //for markdown files
         if (link[2] != "." && link.includes(".md")) {
@@ -1258,7 +1257,7 @@ function parselist(
               })
             );
           }
-        };
+        }
 
         //for notebook files
         if (link[2] != "." && link.includes(".ipynb")) {
@@ -1280,7 +1279,7 @@ function parselist(
               })
             );
           }
-        };
+        }
         //for pdf files
         if (ext == "pdf") {
           // log("pdf")
@@ -1299,15 +1298,15 @@ function parselist(
               })
             );
           }
-        };
+        }
 
 
 
           var downloadableFilesExtensions = "docx,xlsx,pptx,odt,ods,odp".split(",")
 
                 //for downloadableFilesExtensions  files
-                if (link[2] != "." &&  downloadableFilesExtensions.includes(ext)) {
-                  // log(ext)
+                if ( link[2] != "." && downloadableFilesExtensions.includes(ext)) {
+                  // log("xlsx")
                   var linkname = link
                     .replaceAll("./", "")
                     .replaceAll("/", " / ")
@@ -1318,14 +1317,14 @@ function parselist(
                     append(
                       directoryGrid,
                       // gen(a, `${url}`, linkname, "pdfLinks,xlsxLinks", {
-                        gen(a, `${url}`, linkname, "xlsxLinks download", {"data-ext":ext,
+                        gen(a, `${url}`, linkname, "Links Downloadable", {"data-ext":ext,
                         onclick: `downloadURL(\`${url}\`)`,
                         tabindex: 10,
                         title:`download ${ext}`
                       })
                     );
                   }
-                };
+                }
 
 
 
@@ -1344,19 +1343,17 @@ function parselist(
               append(
                 directoryGrid,
                 gen(object, `${url}`, linkname, "csvLinks", {
-                  "data-ext":ext,
-                  "data-file": file,
                   onclick: `parseCsv(\`${url}\`)`,
                   tabindex: 10,
                 })
               );
             }
-          };
+          }
 
 
       });
   });
-};
+}
 
 function mathjaxHljsCopyIcon() {
   console.info("mathjaxHljsCopyIcon");
@@ -1379,28 +1376,10 @@ function mathjaxHljsCopyIcon() {
     setTimeout(WebHelper().addCopyIcon(), 1000);
     MathJax.typesetPromise();
   }, 2000);
-};
+}
 
 
-function filtertable(){
-  var searchInput = grab(`#searchcsv[0]`).value;
-  var rows = grab(`tbody .tablerow`);
-  if (searchInput.length == 0){
-    //show all rows
-    rows.forEach(row=>{
-      row.classList.add("hide");
-    });
-  }
-  else{
-    rows.forEach(row=>{
-      row.classList.add("hide");
-      if (row.innerText.toLowerCase().includes(searchInput.toLowerCase())){
-        row.classList.remove("hide");
-      };
 
-    });
-  };
-};  
 
 function parseCsv(link, callback) {
   var filename=link.split("/")[link.split("/").length-1]
@@ -1409,12 +1388,12 @@ function parseCsv(link, callback) {
   loadscss(slideScss);
   getfile(link, (csv) => {
     if (grab("#back").length != 0) {
-      append("#back", "", "r");
-    };
+      append("#back", "", "replace");
+    }
 
     append(
       `#location`,
-      gen(span, "back", "Back", "pathNavigator", {
+      gen(a, "back", "Back", "pathNavigator", {
         "data-file": "",
         onclick: "appendfile(this)",
         tabindex: 20,
@@ -1455,60 +1434,54 @@ function parseCsv(link, callback) {
         outline:none;
       }
 
-
+      tr:has(td:empty){
+        display: none;
+      }
     }
     
-    `;
-    loadscss(listrootscss);
+    `
+    loadscss(listrootscss)
 
 
-    
     
     append(`main`, gen(div, "listroot","", "listroot"));
-    append(`#listroot`,gen(h1,filename,filename));
-    append(`#listroot`,gen(div,"listheader","","listheader"));
-    append(`#listheader`,gen(input,"searchcsv","search","search",{title:"search","onkeydown":"filtertable()"}));
+    append(`#listroot`,gen(h1,filename,filename))
+    append(`#listroot`,gen(div,"listheader","","listheader"))
+    append(`#listheader`,gen(input,"searchcsv","search","search",{title:"search"}))
     
     
-    var searchElement=grab("#searchcsv[0]");
-
+    var searchElement=grab("#searchcsv")[0]
     searchElement.addEventListener('focus', (e)=> {
-      console.log("searchIn focus");
-      document.removeEventListener("keydown",keyPressHandler);
       
-    });
+      console.log("searchIn focus")
+      document.removeEventListener("keydown",keyPressHandler)
+      
+    })
 
     searchElement.addEventListener('focusout',e=>{
-      document.addEventListener("keydown",keyPressHandler) ;
-    });
-
-    
+      document.addEventListener("keydown",keyPressHandler) 
+    })
 
 
-    append(`#listroot`,gen("table","tablemain","","listbody"));
+    append(`#listroot`,gen(table,"tablemain","","listbody"))
 
-    append(`#tablemain`,gen("thead","tablehead"));
-    append(`#tablemain`,gen("tbody","tablebody"));
-    // log(csv)
+    append(tablemain,gen("thead","tablehead",""))
+    append(tablemain,gen("tbody","tablebody",""))
+    console.log(csv)
 
-    var csvRows=csv.split(`\n`);
+    var csvRows=csv.split("\n")
     for (var i = 0; i<csvRows.length; i++){
-      var rowData=csvRows[i];
+      var rowData=csvRows[i]
       // console.log(rowData)
       if (i==0) 
-        {
-          append("#tablehead",gen("tr",`tablerow${i}`,"","tablerow"));
-
-        } 
+        {append(`#tablehead`,gen("tr",`tablerow${i}`))} 
       else
-        {
-          append("#tablebody",gen("tr",`tablerow${i}`,"","tablerow"))
-        };
-      var colData = rowData.split(",");
+         {append(`#tablebody`,gen("tr",`tablerow${i}`))}
+      var colData = rowData.split(",")
       for (var j = 0; j<colData.length; j++){
-        append(`#tablerow${i}`,gen("td",`tablecol${i}${j}`,colData[j],"left"));
-      };
-    };
+        append(`#tablerow${i}`,gen(td,`tablecol${i}${j}`,colData[j]))
+      }
+    }
 
 
 
@@ -1516,12 +1489,12 @@ function parseCsv(link, callback) {
     
  
     //navigator Search 
-    var sidebarsearchElement=grab("#sideBarSearchInput[0]");
-    sidebarsearchElement.addEventListener('focus', (e)=> {
+    var searchElement=grab("#sideBarSearchInput")[0]
+    searchElement.addEventListener('focus', (e)=> {
       // document.removeEventListener("keydown",keyPressHandler)
-      e.stopPropagation();
+      e.stopPropagation()
       
-    });
+    })
 
 
 
@@ -1532,9 +1505,9 @@ function parseCsv(link, callback) {
     if (callback) {
       console.info("callback");
       callback();
-    };
+    }
   });
-};
+}
 
 
 
@@ -1563,106 +1536,72 @@ function parseCsv(link, callback) {
 
 
 
- // hide sidebar links on search
-  function handleSidebarSearch() {
-    var allSlides = grab(".slide");
-    var allSlidesNav = grab(".slideNavLink");
-    var searchTerm = grab("#sideBarSearchInput")[0].value;
-    console.log(searchTerm);
-
-
-    for (var i = 0; i < allSlides.length; i++) {
-      allSlidesNav[i].parentElement.classList.add("hide");
-      var s = allSlides[i];
-      if (s.innerText.includes(searchTerm)) {
-        allSlidesNav[i].parentElement.classList.remove("hide");
-      };
-        append(
-            slidenavlist,
-            gen(
-              li,
-              "",
-              gen(span, "", `Slide ${i + 1}`, "slideNavLink", {
-                onclick: `slide${i}.scrollIntoView()`,
-              })
-            )
-          );
-    };
-
-    loadscss(`.hide{
-      display: none !important;;
-    }`, "hide");
-  };
-
-
-
-function appendSidebar() {
-  //Append sidebar for slide navigation
-  append(slideroot, gen("aside", "sideBar", ""));
-
-  append(sideBar, "", "o");
-  append(sideBar, gen(div, "slidenav", gen(h3, "", "Navigator")));
-
-  //update sidebar with slide headings
 
 
 
 
-  //add searchbar
-  append(slidenav, gen(input, "sideBarSearchInput", "", "sideBarSearchInput", { oninput: "handleSidebarSearch()" }))
-  append(slidenav, gen(ul, "slidenavlist", "", "slidenavlist"));
 
 
 
-  for (var i = 0; i < grab(".slide").length; i++) {
-    var slideHeading = grab(".slide")[i].querySelectorAll("h1,h2,h3,h4,h5,h6,p")[0].innerText;
-    grab(".slideNavLink")[i].innerHTML += `: ${gens(p, "", slideHeading, "sideNavLinkSummary")}`;
+
+
+
+// hide sidebar links on search
+function handleSidebarSearch(){
+  var allSlides=grab(".slide")
+  var allSlidesNav=grab(".slideNavLink")
+  var searchTerm=grab("#sideBarSearchInput")[0].value
+  console.log(searchTerm)
+
+
+  for(var i=0;i<allSlides.length;i++){
+    allSlidesNav[i].parentElement.classList.add("hide")
+    var s=allSlides[i]
+    if (s.innerText.includes(searchTerm)){
+      allSlidesNav[i].parentElement.classList.remove("hide")
+    }
   }
 
-  append(
-    slidenavlist,
-    gen(
-      li,
-      "",
-      gen(a, "src", `Source`, "slideNavLink", {
-        onclick: `viewSourceFile('${link}')`,
-        href: link,
-        target: "_blank",
-      })
-    )
-  );
-
-};
-
-
-
-
-
-
+  loadscss(`.hide{
+    display: none !important;;
+  }`,"hide")
+}
 
 
 
 function parseSlide(link, callback) {
   console.info("parseslide");
-  // clear/reset dynamicScript
-  append(`#dynamicScript`,"","r");
-  var dynamicScript;
-  
   loadscss(slideScss);
   getfile(link, (md) => {
-    appendBackButton();
+    if (grab("#back").length != 0) {
+      append("#back", "", "replace");
+    }
+
+    append(
+      `#location`,
+      gen(a, "back", "Back", "pathNavigator", {
+        "data-file": "",
+        onclick: "appendfile(this)",
+        tabindex: 20,
+      })
+    );
 
     append(`main`, "", "over");
     updateFiledropEventListeners();
     append(`main`, gen(div, "slideroot", "", "slideroot"));
+    append(slideroot, gen("aside", "sideBar", ""));
+    append(sideBar, gen(div, "slidenav", gen(h3, "", "Navigator")));
 
+    //add searchbar
+    append(slidenav,gen(input,"sideBarSearchInput","","sideBarSearchInput",  {oninput:"handleSidebarSearch()"}))
+    append(slidenav, gen(ul, "slidenavlist", "", "slidenavlist"));
 
     var html = md.split(/^---\s*?$/gm);
 
     for (var i = 0; i < html.length; i++) {
       var h = html[i];
       if (h.length > 0) {
-        var x = parsemd(h, (H,S="") => {
+        var x = parsemd(h, (H) => {
           append(slideroot, gen(section, `slide${i}`, H, "slide"));
           // if (i != 0 && i != html.length) {
           if (i != 0) {
@@ -1673,48 +1612,70 @@ function parseSlide(link, callback) {
                 title: "Re Render Math",
               })
             );
-          };
-          if(S!=""){
-            // append("body",gen(script,"",S,"parsedmdScript"));
-              //reset dynamicScript call at starting of parsemd
-              // append(`#dynamicScript`,"","r")
-              
-              dynamicScript = gen(script,"dynamicScript",S,"dynamicScript");
-              dynamicScript.textContent += S;
-              append("body",dynamicScript);
-          };
-          
+          }
+          append(
+            slidenavlist,
+            gen(
+              li,
+              "",
+              gen(a, "", `Slide ${i + 1}`, "slideNavLink", {
+                onclick: `slide${i}.scrollIntoView()`,
+              })
+            )
+          );
         });
-      };
-    };
+      }
+      //update sidebar with slide headings
+      var slideHeading=grab(".slide")[i].querySelectorAll("h1,h2,h3,h4,h5,h6,p")[0].innerText
+      grab(".slideNavLink")[i].innerHTML+=`: ${gens(p,"",slideHeading,"sideNavLinkSummary")}`
 
-
-
-    appendSidebar();
+    }
+    append(
+      slidenavlist,
+      gen(
+        li,
+        "",
+        gen(a, "src", `Source`, "slideNavLink", {
+          onclick: `viewSourceFile('${link}')`,
+          href: link,
+          target: "_blank",
+        })
+      )
+    );
     convertLocalLinks();
     if (callback) {
       console.info("callback");
       callback();
-    };
+    }
   });
   
   setTimeout(() => {
-    PageNavSelf.updatePageNavUl();
-  },3000);
+    PageNavSelf.updatePageNavUl()
+  },3000)
 
 
 
-};
+}
 
 function parseNotebook(link, callback) {
   loadscss(slideScss);
   getfile(link, (nb) => {
-    appendBackButton()
+    if (grab("#back").length != 0) {
+      append("#back", "", "replace");
+    }
+    append(
+      `#location`,
+      gen(a, "back", "Back", "pathNavigator", {
+        "data-file": "",
+        onclick: "appendfile(this)",
+        tabindex: 20,
+      })
+    );
     if (grab("#main").length != 0) {
       append("#main", "", "over");
 
       updateFiledropEventListeners();
-    };
+    }
 
     append(main, gen(div, "blockroot", "", "blockroot"));
     append(blockroot, gen("aside", "sideBar", ""));
@@ -1743,7 +1704,7 @@ function parseNotebook(link, callback) {
             blockroot,
             gen(div, `Markdown${ecount}`, parsemd(md), "markdown block")
           );
-        };
+        }
         if (cell_type == "code") {
           var count = cell.execution_count;
 
@@ -1789,7 +1750,7 @@ function parseNotebook(link, callback) {
                   `#output${count}`,
                   gen("code", "", text, `${output_type}`)
                 );
-              };
+              }
 
               if (output_type == "display_data") {
                 var data = output.data;
@@ -1805,7 +1766,7 @@ function parseNotebook(link, callback) {
                     )
                   );
                   // append(`#output${count}`, gen(p, "", gen(code, "", text, `output ${output_type}`)))
-                };
+                }
 
                 if (data.hasOwnProperty("image/png")) {
                   var className = "";
@@ -1822,7 +1783,7 @@ function parseNotebook(link, callback) {
                     })
                   );
                 }
-              };
+              }
 
               if (
                 output_type == "execute_result" ||
@@ -1843,7 +1804,7 @@ function parseNotebook(link, callback) {
             });
           }
         }
-      };
+      }
     });
     // fill sidenav with data
     var noOfBlocks = grab(".block").length;
@@ -1866,7 +1827,7 @@ function parseNotebook(link, callback) {
           })
         )
       );
-    };
+    }
     // download source file
     var downloadFileName = `${link.split("/")[link.split("/").length - 2]}_${link.split("/")[link.split("/").length - 1]
       }`;
@@ -1909,15 +1870,15 @@ function parseNotebook(link, callback) {
 
   setTimeout(() => {
     PageNavSelf.updatePageNavUl()
-  },3000);
+  },3000)
 
 
     
-};
+}
 
 function closeparent(e) {
   append(e.parentElement, "", "replace");
-};
+}
 
 function parsePdf(link) {
   loadscss(slideScss);
@@ -1945,17 +1906,28 @@ function parsePdf(link) {
   grab(".pdfdialog")[0].addEventListener('click', (event) => event.stopPropagation());
 
   grab("#main")[0].addEventListener('click', () => {
-    grab(".pdfdialog")[0].close();
+    grab(".pdfdialog")[0].close()
     // log("click")
   });
   
+
+
+  // pdfdialog.addEventListener("blur", () => {
+  //   append(".pdfdialog","","o")
+  //   // pdfdialog.classList.remove("showdialog");
+  //   pdfdialog.close();
+  //   log("blur")
+  //   append(pdfdialog,"","r")
+  // });
+
+
   append(
     pdfdialog,
     gen(span, "closedialog", "", "closedialog cross", {
       onclick: "closeparent(this)", title:"close pdf"
     })
   );
-};
+}
 
 WebHelper().init();
 if (window.location.href.includes("Gallery")) {
@@ -1963,12 +1935,15 @@ if (window.location.href.includes("Gallery")) {
   setTimeout(() => {
     load("/gallery.js");
   }, 1000);
-};
+}
 
 reloadPage();
 
 //
 function updateFiledropEventListeners(target = grab("#main")[0]) {
+  // e.preventDefault ();
+  // e.stopPropagation ();
+  // log("updateFiledropEventListeners")
   target.addEventListener("dragover", (e) => {
     e.preventDefault();
   });
@@ -1986,20 +1961,20 @@ function updateFiledropEventListeners(target = grab("#main")[0]) {
     e.preventDefault();
     e.stopPropagation();
     target.classList.add("blur");
-  };
+  }
 
   function ondragleave(e) {
     e.preventDefault();
     e.stopPropagation();
     target.classList.remove("blur");
-  };
+  }
 
   function ondrop(e) {
     e.preventDefault();
     e.stopPropagation();
     target.classList.remove("blur");
     dropfilehandler(e);
-  };
+  }
 
   function dropfilehandler(e) {
     target.classList.remove("blur");
@@ -2021,7 +1996,7 @@ function updateFiledropEventListeners(target = grab("#main")[0]) {
     }
     updateFiledropEventListeners();
   }
-};
+}
 
 // updateFiledropEventListeners()
 
@@ -2042,9 +2017,11 @@ var hidenodescss=`
 [data-dir*="node_modules"]{
   display:none !important;
 }
-`;
-setTimeout(loadscss(hidenodescss),2000);
-var printSlideStyle = `
+`
+setTimeout(loadscss(hidenodescss),2000)
+
+var printSlideStyle=`
+
 @media print {
     @page {
         size: A4 landscape;
@@ -2082,17 +2059,16 @@ var printSlideStyle = `
     #appfooter {
         display: none;
     }
-
     a::after{
       font-style: italic;
       font-size:.8em;
       content: " (" attr(href) ") ";
    }
-}
-`;
+}`
 
 
 var printNotesStyle=`
+
 @media print {
     @page {
         size: A4 portrait;
@@ -2114,13 +2090,24 @@ var printNotesStyle=`
         overflow: auto;
         height: min-content;
         background-color: white;
-        padding:.5em;
+padding:.5em;
     }
 
+    .slide {
+//        page-break-after: always;
+//        break-inside: avoid;
+//        page-break-inside: avoid;
+    }
 
+    .block {
+//        break-inside: avoid;
+//        page-break-inside: avoid;
+    }
 
     img {
         display: block;
+//        page-break-before: auto;
+//        page-break-after: auto;
         page-break-inside: avoid;
         break-inside: avoid;
     }
@@ -2135,9 +2122,16 @@ var printNotesStyle=`
       font-size:.8em;
       content: " (" attr(href) ") ";
    }
-}
-   `;
+}`
+//loadscss(printSlideStyle,"printSlideStyle")
 
+
+//Disable Right Click
+// if(!DEBUG){
+// window.addEventListener("contextmenu",(e)=>{
+// e.preventDefault() 
+// e.stopImmediatePropagation()
+// })
+// }
 console.info(`SlideGen version ${slidegenversion}\ Ready`);
-console.info(`SlideGen ${slidegenlicense}\ Ready`);
-
+console.info(`SlideGen copyrights ${slidegenlicense}\ Ready`);

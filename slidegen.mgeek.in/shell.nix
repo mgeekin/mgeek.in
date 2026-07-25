@@ -12,12 +12,11 @@ pkgs.mkShellNoCC {
     nodePackages.nodemon 
     vim 
     curl     
-    vscodium 
+   # vscodium 
     firefox 
   ];
 
   shellHook = ''
-    cowsay ${message}
-    npm run dev & echo "y" | codium . & firefox localhost:3000
+    npm run dev & echo "y" | code . & firefox localhost:3000
     '';
 }

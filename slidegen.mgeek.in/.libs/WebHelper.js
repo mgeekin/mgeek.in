@@ -546,7 +546,7 @@ const WebHelper = () => {
                     append(copyright, "", 'over')
                     let d = new Date();
                     let year = d.getFullYear();
-                    append("#copyright", gen("span", "copyurl", `Designed with <a href="https://SevnJS.mgeek.in">SevnJS</a> &copy ${year} <a href="http://mgeek.in">mGeek.in</a>`))
+                    append("#copyright", gen("span", "copyurl", `&copy ${year} <a href="https://SlideGen.mgeek.in">SlideGen</a> <a href="http://mgeek.in">mGeek.in</a>`))
                     if (author == undefined) {
                         append("#copyright", gen("span", "copyauthor", "Designed by "))
                         append("#copyauthor", gen("a", "copyrightauthor", "Dr. Prateek Raj Gautam", "", "https://webmaster.mgeek.in/"))

@@ -1,4 +1,0 @@
-./
-./.libs
-./Demo
-./README.md
