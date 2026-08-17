@@ -1,0 +1,426 @@
+{
+  "collections": [
+    {
+      "id": "we0xakk3y8wsz33",
+      "name": "users",
+      "type": "auth",
+      "schema": [
+        {
+          "id": "9c0cscbjpudf8g5",
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "31up57o3ykxe89p",
+          "name": "user_type",
+          "type": "select",
+          "required": true,
+          "options": {
+            "maxSelect": 1,
+            "values": [
+              "freelancer",
+              "client"
+            ]
+          }
+        },
+        {
+          "id": "gvfi13lfbpl5x0k",
+          "name": "profile_complete",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "goixws5niidsubq",
+      "name": "experts",
+      "type": "base",
+      "schema": [
+        {
+          "id": "9si52ep101x61b8",
+          "name": "user",
+          "type": "relation",
+          "required": true,
+          "options": {
+            "collectionId": "we0xakk3y8wsz33",
+            "cascadeDelete": true,
+            "maxSelect": 1,
+            "minSelect": 0,
+            "displayFields": []
+          }
+        },
+        {
+          "id": "09p62gn9ngujrth",
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "b57hqur4t4ohge6",
+          "name": "email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "ksq2tks1qr9vspi",
+          "name": "role",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "z8jt77it1tkrmwy",
+          "name": "bio",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "lmuisp2rvr3ex8b",
+          "name": "location",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "ejwnozz44zgw1zx",
+          "name": "primary_skills",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "nzikum9s0q1e8ez",
+          "name": "secondary_skills",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "56x5be7vtty2vh3",
+          "name": "experience",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "xe9d0yws8na1bmp",
+          "name": "portfolio",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "dhjejv30iwgs2zp",
+          "name": "github",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "oj5ajmldn8ve8oo",
+          "name": "linkedin",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "u46l4sfos0aiw1f",
+          "name": "avatar",
+          "type": "file",
+          "required": false,
+          "options": {
+            "mimeTypes": [],
+            "thumbs": [],
+            "maxSelect": 1,
+            "maxSize": 5242880,
+            "protected": false
+          }
+        },
+        {
+          "id": "d5fx9oaiurz1zt8",
+          "name": "status",
+          "type": "select",
+          "required": true,
+          "options": {
+            "maxSelect": 1,
+            "values": [
+              "pending",
+              "approved",
+              "active",
+              "inactive",
+              "rejected"
+            ]
+          }
+        },
+        {
+          "id": "l7jxkgxoekr82it",
+          "name": "profile_public",
+          "type": "bool",
+          "required": false
+        },
+        {
+          "id": "3tarqos7ywr0qdd",
+          "name": "work_for_mgeek",
+          "type": "bool",
+          "required": false
+        },
+        {
+          "id": "aj72yolj7ld3idj",
+          "name": "available_to_recruiters",
+          "type": "bool",
+          "required": false
+        },
+        {
+          "id": "pjw9g094fbcyj5q",
+          "name": "availability",
+          "type": "select",
+          "required": false,
+          "options": {
+            "maxSelect": 1,
+            "values": [
+              "available",
+              "limited",
+              "unavailable"
+            ]
+          }
+        },
+        {
+          "id": "scru7adiwncpec7",
+          "name": "preferred_engagement",
+          "type": "select",
+          "required": false,
+          "options": {
+            "maxSelect": 1,
+            "values": [
+              "fulltime",
+              "parttime",
+              "contract",
+              "freelance"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "6fz30lf6ngyryc9",
+      "name": "clients",
+      "type": "base",
+      "schema": [
+        {
+          "id": "mt6uel4fe8fvcjo",
+          "name": "user",
+          "type": "relation",
+          "required": true,
+          "options": {
+            "collectionId": "we0xakk3y8wsz33",
+            "cascadeDelete": true,
+            "maxSelect": 1,
+            "minSelect": 0,
+            "displayFields": []
+          }
+        },
+        {
+          "id": "qg4t2a6dqwe81zt",
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "3xrw0b7r2utl5wb",
+          "name": "email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "38s26ojz4qh2wnn",
+          "name": "company_name",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "f25q3dog9hiws75",
+          "name": "website",
+          "type": "url",
+          "required": false
+        },
+        {
+          "id": "yk0059jlam5spnr",
+          "name": "industry",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "t57xnfo89gj1ztb",
+          "name": "description",
+          "type": "text",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "oorzc6kn4zjbd7o",
+      "name": "projects",
+      "type": "base",
+      "schema": [
+        {
+          "id": "0k38kecp5qexp5i",
+          "name": "title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "8ae2zoldithnhuy",
+          "name": "description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "uzy0lp7w9x1633a",
+          "name": "category",
+          "type": "select",
+          "required": true,
+          "options": {
+            "maxSelect": 1,
+            "values": [
+              "Software",
+              "Web",
+              "Research",
+              "Infrastructure",
+              "Automation",
+              "IoT",
+              "Open Source"
+            ]
+          }
+        },
+        {
+          "id": "3zcjzbuiam56c7j",
+          "name": "status",
+          "type": "select",
+          "required": true,
+          "options": {
+            "maxSelect": 1,
+            "values": [
+              "draft",
+              "published",
+              "archived"
+            ]
+          }
+        },
+        {
+          "id": "pr9hj6qtfel0l5p",
+          "name": "tags",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "epzoo11gtdup7au",
+          "name": "image",
+          "type": "file",
+          "required": false,
+          "options": {
+            "mimeTypes": [],
+            "thumbs": [],
+            "maxSelect": 1,
+            "maxSize": 5242880,
+            "protected": false
+          }
+        },
+        {
+          "id": "juspf0a3e2gtz1b",
+          "name": "content",
+          "type": "editor",
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "jg6zj0a3mq9ngsx",
+      "name": "leads",
+      "type": "base",
+      "schema": [
+        {
+          "id": "ozutg464gyy6sn3",
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "91yet1afuaioo9q",
+          "name": "email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "gozuiq66l1rugdj",
+          "name": "organization",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "h29vp7sjk3mkdsu",
+          "name": "service",
+          "type": "select",
+          "required": false,
+          "options": {
+            "maxSelect": 1,
+            "values": [
+              "Software Development",
+              "Web Development",
+              "WordPress",
+              "Research & MATLAB",
+              "Data & AI",
+              "Infrastructure & Servers",
+              "DevOps & Automation",
+              "IoT & Embedded",
+              "Technical Consulting",
+              "Other"
+            ]
+          }
+        },
+        {
+          "id": "1huzj79w6rhttog",
+          "name": "description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "kcbt81euac18k8l",
+          "name": "budget",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "7ruzuudo1ctyuvn",
+          "name": "timeline",
+          "type": "text",
+          "required": false
+        },
+        {
+          "id": "1uopbqwt08vb3sa",
+          "name": "status",
+          "type": "select",
+          "required": true,
+          "options": {
+            "maxSelect": 1,
+            "values": [
+              "New",
+              "Reviewing",
+              "Needs Information",
+              "Qualified",
+              "Proposal",
+              "Won",
+              "Lost",
+              "Archived"
+            ]
+          }
+        },
+        {
+          "id": "1wrhy349q9du5f5",
+          "name": "user",
+          "type": "relation",
+          "required": false,
+          "options": {
+            "collectionId": "we0xakk3y8wsz33",
+            "cascadeDelete": false,
+            "maxSelect": 1,
+            "minSelect": 0,
+            "displayFields": []
+          }
+        }
+      ]
+    }
+  ]
+}
