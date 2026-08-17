@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the mGeek network of technical specialists and experts.">
+    <title>Experts - mGeek</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="assets/brand/logo.svg" alt="mGeek" height="40">
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experts.html">Experts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html" class="nav-link-secondary">Login</a></li>
+                <li><a href="contact.html" class="btn btn-primary">Start a Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Our Experts</h1>
+                <p class="section-description">Independent technical professionals across software, research, design, infrastructure, data and other specialized disciplines.</p>
+                
+                <div class="experts-grid" id="allExpertsGrid">
+                    <p class="placeholder-text">Expert profiles will appear here once approved.</p>
+                </div>
+                
+                <div class="section-cta" style="margin-top: 4rem;">
+                    <a href="join.html" class="btn btn-primary btn-large">Join the mGeek Network</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 mGeek. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.21.1/dist/pocketbase.umd.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        async function loadAllExperts() {
+            const pb = window.pb;
+            const expertsGrid = document.getElementById('allExpertsGrid');
+            
+            try {
+                const records = await pb.collection('experts').getList(1, 50, {
+                    sort: '-created',
+                    filter: 'status = "approved" && profile_public = true'
+                });
+                
+                if (records.items.length === 0) {
+                    expertsGrid.innerHTML = '<p class="placeholder-text">Expert profiles will appear here once approved.</p>';
+                    return;
+                }
+                
+                expertsGrid.innerHTML = records.items.map(expert => `
+                    <div class="service-card">
+                        <div class="service-icon">${expert.avatar ? '👤' : expert.name.charAt(0)}</div>
+                        <h3>${expert.name}</h3>
+                        <p style="color: var(--color-primary); font-weight: 500; margin-bottom: 0.5rem;">${expert.role || 'Technical Specialist'}</p>
+                        <p style="margin-bottom: 1rem;">${expert.bio ? expert.bio.substring(0, 120) + '...' : 'Expert professional'}</p>
+                        ${expert.primary_skills ? '<div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">' + expert.primary_skills.split(',').slice(0, 4).map(skill => `<span style="font-size: 0.75rem; padding: 0.25rem 0.5rem; background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: var(--radius-sm);">${skill.trim()}</span>`).join('') + '</div>' : ''}
+                        <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem;">
+                            ${expert.github ? '<a href="' + expert.github + '" target="_blank" style="color: var(--color-text-light);">GitHub</a>' : ''}
+                            ${expert.linkedin ? '<a href="' + expert.linkedin + '" target="_blank" style="color: var(--color-text-light);">LinkedIn</a>' : ''}
+                            ${expert.portfolio ? '<a href="' + expert.portfolio + '" target="_blank" style="color: var(--color-text-light);">Portfolio</a>' : ''}
+                        </div>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading experts:', error);
+            }
+        }
+        
+        loadAllExperts();
+    </script>
+</body>
+</html>

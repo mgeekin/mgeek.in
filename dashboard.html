@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - mGeek</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="assets/brand/logo.svg" alt="mGeek" height="40">
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="dashboard.html" class="nav-link-active">Dashboard</a></li>
+                <li><a href="#" id="logoutBtn" class="btn btn-outline">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard-header">
+        <div class="container">
+            <h1 class="dashboard-title" id="dashboardWelcome">Welcome back</h1>
+            <p class="dashboard-subtitle" id="dashboardSubtitle">Manage your profile and activity</p>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="container">
+            <div class="dashboard-nav" id="dashboardNav">
+            </div>
+
+            <div id="freelancerDashboard" class="dashboard-content" style="display: none;">
+                <div id="profileSection" class="dashboard-section active">
+                    <div class="profile-section">
+                        <h3>Profile Information</h3>
+                        <form id="freelancerProfileForm">
+                            <div class="form-group">
+                                <label for="expertRole">Professional Title / Role</label>
+                                <input type="text" id="expertRole" placeholder="e.g., Full Stack Developer, MATLAB Specialist">
+                            </div>
+                            <div class="form-group">
+                                <label for="expertBio">Short Bio</label>
+                                <textarea id="expertBio" rows="4" placeholder="Tell us about your expertise and experience"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="expertLocation">Location / Time Zone</label>
+                                <input type="text" id="expertLocation" placeholder="e.g., New York, USA (EST)">
+                            </div>
+                            <div class="form-group">
+                                <label for="primarySkills">Primary Skills (comma-separated)</label>
+                                <input type="text" id="primarySkills" placeholder="e.g., JavaScript, React, Node.js">
+                                <small>Enter your main technical skills</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="secondarySkills">Secondary Skills (comma-separated)</label>
+                                <input type="text" id="secondarySkills" placeholder="e.g., Python, Docker, AWS">
+                            </div>
+                            <div class="form-group">
+                                <label for="expertExperience">Years of Experience</label>
+                                <select id="expertExperience">
+                                    <option value="">Select experience level</option>
+                                    <option value="0-2">0-2 years</option>
+                                    <option value="3-5">3-5 years</option>
+                                    <option value="6-10">6-10 years</option>
+                                    <option value="10+">10+ years</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="expertPortfolio">Portfolio URL</label>
+                                <input type="url" id="expertPortfolio" placeholder="https://yourportfolio.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="expertGithub">GitHub Profile</label>
+                                <input type="url" id="expertGithub" placeholder="https://github.com/yourusername">
+                            </div>
+                            <div class="form-group">
+                                <label for="expertLinkedin">LinkedIn Profile</label>
+                                <input type="url" id="expertLinkedin" placeholder="https://linkedin.com/in/yourprofile">
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="workForMgeek" checked>
+                                    I want to work for mGeek on projects
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="availableToRecruiters">
+                                    Show my profile to other recruiters
+                                </label>
+                                <small>Allow your profile to be visible to external recruiters</small>
+                            </div>
+                            <div class="form-message" id="profileMessage"></div>
+                            <div class="profile-actions">
+                                <button type="submit" class="btn btn-primary">Save Profile</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="projectsSection" class="dashboard-section">
+                    <div class="profile-section">
+                        <h3>My Projects</h3>
+                        <div id="freelancerProjects" class="empty-state">
+                            <div class="empty-state-icon">📁</div>
+                            <h3>No projects yet</h3>
+                            <p>Projects you're working on will appear here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="availabilitySection" class="dashboard-section">
+                    <div class="profile-section">
+                        <h3>Availability Settings</h3>
+                        <form id="availabilityForm">
+                            <div class="form-group">
+                                <label for="availability">Current Availability</label>
+                                <select id="availability">
+                                    <option value="available">Available for new projects</option>
+                                    <option value="limited">Limited availability</option>
+                                    <option value="unavailable">Not available</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferredEngagement">Preferred Engagement Type</label>
+                                <select id="preferredEngagement">
+                                    <option value="fulltime">Full-time</option>
+                                    <option value="parttime">Part-time</option>
+                                    <option value="contract">Contract</option>
+                                    <option value="freelance">Freelance</option>
+                                </select>
+                            </div>
+                            <div class="form-message" id="availabilityMessage"></div>
+                            <button type="submit" class="btn btn-primary">Update Availability</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="clientDashboard" class="dashboard-content" style="display: none;">
+                <div id="clientProfileSection" class="dashboard-section active">
+                    <div class="profile-section">
+                        <h3>Company Information</h3>
+                        <form id="clientProfileForm">
+                            <div class="form-group">
+                                <label for="companyName">Company Name</label>
+                                <input type="text" id="companyName" placeholder="Your company or organization">
+                            </div>
+                            <div class="form-group">
+                                <label for="companyWebsite">Website</label>
+                                <input type="url" id="companyWebsite" placeholder="https://yourcompany.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="companyIndustry">Industry</label>
+                                <input type="text" id="companyIndustry" placeholder="e.g., Technology, Healthcare">
+                            </div>
+                            <div class="form-group">
+                                <label for="companyDescription">About Your Organization</label>
+                                <textarea id="companyDescription" rows="4" placeholder="Brief description of your business"></textarea>
+                            </div>
+                            <div class="form-message" id="clientProfileMessage"></div>
+                            <button type="submit" class="btn btn-primary">Save Information</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="clientProjectsSection" class="dashboard-section">
+                    <div class="profile-section">
+                        <h3>My Project Requests</h3>
+                        <div class="section-cta" style="margin-bottom: 2rem;">
+                            <a href="contact.html" class="btn btn-primary">Submit New Project Request</a>
+                        </div>
+                        <div id="clientProjects" class="empty-state">
+                            <div class="empty-state-icon">📋</div>
+                            <h3>No project requests yet</h3>
+                            <p>Your project requests will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 mGeek. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.21.1/dist/pocketbase.umd.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

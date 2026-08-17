@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - mGeek</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1><a href="/"><img src="assets/brand/logo.svg" alt="mGeek" height="40"></a></h1>
+                <p>Infrastructure & DevOps Solutions</p>
+            </div>
+            
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+
+            <div id="login" class="auth-form active">
+                <h2>Welcome Back</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                    </div>
+                    <div class="form-message" id="loginMessage"></div>
+                    <button type="submit" class="btn btn-primary btn-large btn-full">Login</button>
+                </form>
+                <p class="auth-footer">Don't have an account? <a href="#" class="link" data-switch="register">Register here</a></p>
+            </div>
+
+            <div id="register" class="auth-form">
+                <h2>Join mGeek</h2>
+                <p class="form-description">Choose your account type to get started</p>
+                
+                <div class="user-type-selector">
+                    <label class="user-type-card">
+                        <input type="radio" name="userType" value="freelancer" checked>
+                        <div class="card-content">
+                            <h3>Freelancer / Expert</h3>
+                            <p>Join our network, showcase your skills, and work on projects</p>
+                        </div>
+                    </label>
+                    <label class="user-type-card">
+                        <input type="radio" name="userType" value="client">
+                        <div class="card-content">
+                            <h3>Job Poster / Client</h3>
+                            <p>Post projects and hire talented professionals</p>
+                        </div>
+                    </label>
+                </div>
+
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="registerName">Full Name</label>
+                        <input type="text" id="registerName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" name="password" required minlength="8">
+                        <small>Minimum 8 characters</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPasswordConfirm">Confirm Password</label>
+                        <input type="password" id="registerPasswordConfirm" name="passwordConfirm" required>
+                    </div>
+                    <div class="form-message" id="registerMessage"></div>
+                    <button type="submit" class="btn btn-primary btn-large btn-full">Create Account</button>
+                </form>
+                <p class="auth-footer">Already have an account? <a href="#" class="link" data-switch="login">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.21.1/dist/pocketbase.umd.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

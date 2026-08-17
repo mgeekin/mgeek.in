@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Start your project with mGeek. Tell us about your technical requirements.">
+    <title>Start a Project - mGeek</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="assets/brand/logo.svg" alt="mGeek" height="40">
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#services">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experts.html">Experts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html" class="nav-link-secondary">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="auth-card" style="max-width: 700px; margin: 0 auto;">
+                    <div class="auth-header">
+                        <h1>Start a Project</h1>
+                        <p>Tell us about your technical requirements</p>
+                    </div>
+
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">Organization (Optional)</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Category</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="Software Development">Software Development</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="WordPress">WordPress</option>
+                                <option value="Research & MATLAB">Research & MATLAB</option>
+                                <option value="Data & AI">Data & AI</option>
+                                <option value="Infrastructure & Servers">Infrastructure & Servers</option>
+                                <option value="DevOps & Automation">DevOps & Automation</option>
+                                <option value="IoT & Embedded">IoT & Embedded</option>
+                                <option value="Technical Consulting">Technical Consulting</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Project Description *</label>
+                            <textarea id="description" name="description" rows="6" required placeholder="Tell us what you're trying to build, fix, or improve"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="budget">Budget Range (Optional)</label>
+                            <input type="text" id="budget" name="budget" placeholder="e.g., $5,000 - $10,000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Expected Timeline (Optional)</label>
+                            <input type="text" id="timeline" name="timeline" placeholder="e.g., 2-3 months">
+                        </div>
+
+                        <div class="form-message" id="contactMessage"></div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full">Submit Project Request</button>
+                    </form>
+
+                    <div class="auth-footer">
+                        <p>We'll review your request and get back to you within 24-48 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 mGeek. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy</a>
+                    <a href="terms.html">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.21.1/dist/pocketbase.umd.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

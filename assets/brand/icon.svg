@@ -1,0 +1,20 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="48" height="48" rx="8" fill="#2563eb"/>
+  
+  <!-- Server stack icon -->
+  <rect x="10" y="10" width="28" height="5" rx="2" fill="#ffffff"/>
+  <rect x="10" y="18" width="28" height="5" rx="2" fill="#ffffff"/>
+  <rect x="10" y="26" width="28" height="5" rx="2" fill="#ffffff"/>
+  <rect x="10" y="34" width="28" height="5" rx="2" fill="#ffffff"/>
+  
+  <!-- Server status lights -->
+  <circle cx="14" cy="12.5" r="1.2" fill="#10b981"/>
+  <circle cx="18" cy="12.5" r="1.2" fill="#10b981"/>
+  <circle cx="14" cy="20.5" r="1.2" fill="#10b981"/>
+  <circle cx="18" cy="20.5" r="1.2" fill="#10b981"/>
+  <circle cx="14" cy="28.5" r="1.2" fill="#10b981"/>
+  <circle cx="18" cy="28.5" r="1.2" fill="#f59e0b"/>
+  <circle cx="14" cy="36.5" r="1.2" fill="#10b981"/>
+  <circle cx="18" cy="36.5" r="1.2" fill="#10b981"/>
+</svg>

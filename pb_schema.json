@@ -1,0 +1,275 @@
+{
+  "collections": [
+    {
+      "name": "users",
+      "type": "auth",
+      "schema": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "user_type",
+          "type": "select",
+          "required": true,
+          "options": {
+            "values": ["freelancer", "client"]
+          }
+        },
+        {
+          "name": "profile_complete",
+          "type": "bool",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "experts",
+      "type": "base",
+      "schema": [
+        {
+          "name": "user",
+          "type": "relation",
+          "required": true,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": true
+          }
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "role",
+          "type": "text"
+        },
+        {
+          "name": "bio",
+          "type": "text"
+        },
+        {
+          "name": "location",
+          "type": "text"
+        },
+        {
+          "name": "primary_skills",
+          "type": "text"
+        },
+        {
+          "name": "secondary_skills",
+          "type": "text"
+        },
+        {
+          "name": "experience",
+          "type": "text"
+        },
+        {
+          "name": "portfolio",
+          "type": "url"
+        },
+        {
+          "name": "github",
+          "type": "url"
+        },
+        {
+          "name": "linkedin",
+          "type": "url"
+        },
+        {
+          "name": "avatar",
+          "type": "file",
+          "options": {
+            "maxSelect": 1,
+            "maxSize": 5242880
+          }
+        },
+        {
+          "name": "status",
+          "type": "select",
+          "required": true,
+          "options": {
+            "values": ["pending", "approved", "active", "inactive", "rejected"]
+          }
+        },
+        {
+          "name": "profile_public",
+          "type": "bool"
+        },
+        {
+          "name": "work_for_mgeek",
+          "type": "bool"
+        },
+        {
+          "name": "available_to_recruiters",
+          "type": "bool"
+        },
+        {
+          "name": "availability",
+          "type": "select",
+          "options": {
+            "values": ["available", "limited", "unavailable"]
+          }
+        },
+        {
+          "name": "preferred_engagement",
+          "type": "select",
+          "options": {
+            "values": ["fulltime", "parttime", "contract", "freelance"]
+          }
+        }
+      ]
+    },
+    {
+      "name": "clients",
+      "type": "base",
+      "schema": [
+        {
+          "name": "user",
+          "type": "relation",
+          "required": true,
+          "options": {
+            "collectionId": "users",
+            "cascadeDelete": true
+          }
+        },
+        {
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "company_name",
+          "type": "text"
+        },
+        {
+          "name": "website",
+          "type": "url"
+        },
+        {
+          "name": "industry",
+          "type": "text"
+        },
+        {
+          "name": "description",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "name": "projects",
+      "type": "base",
+      "schema": [
+        {
+          "name": "title",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "category",
+          "type": "select",
+          "required": true,
+          "options": {
+            "values": ["Software", "Web", "Research", "Infrastructure", "Automation", "IoT", "Open Source"]
+          }
+        },
+        {
+          "name": "status",
+          "type": "select",
+          "required": true,
+          "options": {
+            "values": ["draft", "published", "archived"]
+          }
+        },
+        {
+          "name": "tags",
+          "type": "text"
+        },
+        {
+          "name": "image",
+          "type": "file",
+          "options": {
+            "maxSelect": 1,
+            "maxSize": 5242880
+          }
+        },
+        {
+          "name": "content",
+          "type": "editor"
+        }
+      ]
+    },
+    {
+      "name": "leads",
+      "type": "base",
+      "schema": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true
+        },
+        {
+          "name": "organization",
+          "type": "text"
+        },
+        {
+          "name": "service",
+          "type": "select",
+          "options": {
+            "values": ["Software Development", "Web Development", "WordPress", "Research & MATLAB", "Data & AI", "Infrastructure & Servers", "DevOps & Automation", "IoT & Embedded", "Technical Consulting", "Other"]
+          }
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "required": true
+        },
+        {
+          "name": "budget",
+          "type": "text"
+        },
+        {
+          "name": "timeline",
+          "type": "text"
+        },
+        {
+          "name": "status",
+          "type": "select",
+          "required": true,
+          "options": {
+            "values": ["New", "Reviewing", "Needs Information", "Qualified", "Proposal", "Won", "Lost", "Archived"]
+          }
+        },
+        {
+          "name": "user",
+          "type": "relation",
+          "options": {
+            "collectionId": "users"
+          }
+        }
+      ]
+    }
+  ]
+}
